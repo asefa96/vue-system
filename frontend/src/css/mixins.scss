@@ -1,0 +1,21 @@
+@mixin createDiv($width, $height, $bgColor, $position, $top, $bottom, $left, $right) {
+    height: $height;
+    width: $width;
+    background-color: $bgColor;
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    vertical-align: top;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+@mixin setCenter() {
+    margin: -20% 0 0 -25%;
+    top: 50%;
+    bottom: 0%;
+    left: 50%;
+    right: 0%;
+}

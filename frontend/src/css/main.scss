@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: $bgColor;
+}
+
+.info {
+  @include createDiv(50%, 70%, white, absolute, 0, 0, 0, 0);
+  @include setCenter();
+  box-shadow: 0px 0px 36px 15px rgba(0, 0, 0, 0.28);
+  border-radius: 5px;
+}
+
+.infoCPU {
+  @include createDiv(45%, 40%, white, absolute, 58%, 0, 2%, 0);
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.28);
+  border-radius: 5px;
+}
+
+.infoMemory {
+  @include createDiv(45%, 40%, white, absolute, 58%, 0, 52%, 0);
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.28);
+  border-radius: 5px;
+}
+
+
+.navBar {
+  @include createDiv(100%, 12%, none, relative, -49px, 0, 0px, 0);
+  ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      
+  }
+  li{
+    background-image: linear-gradient(bottom, #222222 0%, #555555 100%);
+      float:left;
+      position: relative;
+      width: 20%;
+      border-radius:  10px 10px 0 0 ;
+      :first-child a{
+        border-left: none;    
+      }
+
+      :last-child a{
+        border-right: none; 
+      }
+      :hover{
+        transform: scale(1.1);
+        
+    }
+    
+  }
+  a{
+      border-right: 1px solid rgb(77, 74, 74);
+      border-left: 1px solid #555;
+      border-radius:  10px 10px 0 0 ;
+      border-color: rgb(247, 247, 247);
+      color: rgb(248, 242, 242);
+      display: block;
+      font-size: 25px;
+      height: 50px;
+      overflow: hidden;
+      text-align: center;
+      text-shadow: 0 -1px 0 #000;
+      text-decoration: none;
+      
+  }
+  span{
+      position: relative;
+      
+  vertical-align: middle;
+  }
+  
+}
+
+table {
+  position: absolute;
+  top:20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+  font-size: 25px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
