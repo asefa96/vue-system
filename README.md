@@ -1,2 +1,2 @@
 # vue-system
-Vue-system dockerize application
+Basic Vue-system dockerize application
