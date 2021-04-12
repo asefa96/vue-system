@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+	"github.com/rs/cors"
 )
 
 func main() {
@@ -13,7 +14,7 @@ func main() {
 	r.HandleFunc("/", getInfos).Methods("GET")
 
 	fmt.Println("run on: http://localhost:8888")
-
-	http.ListenAndServe(":8888", r)
+	handler := cors.Default().Handler(r)
+	http.ListenAndServe(":8888", handler)
 
 }

@@ -32,13 +32,13 @@ func getInfos(w http.ResponseWriter, r *http.Request) {
 	info.HostIP = getMyIP().String()
 	info.Processors = cpuInfo[0].ModelName
 	info.DiskUsed = v.UsedPercent
+	info.Ram = (v.Total) / 1024 / 1024 / 1000
 
 	data, err := json.Marshal(info)
 	if err != nil {
 		return
 	}
 	// fmt.Printf("Total: %v, Free:%v, UsedPercent:%f%%\n", v.Total, v.Free, v.UsedPercent)
-
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
 	w.Write(data)

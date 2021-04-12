@@ -7,4 +7,5 @@ type SystemInfo struct {
 	Memory     string  `json:"memory"`
 	HostIP     string  `json:"hostip"`
 	DiskUsed   float64 `json:"diskused"`
+	Ram        uint64  `json:"ram"`
 }
